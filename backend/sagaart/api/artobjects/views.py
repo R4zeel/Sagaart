@@ -17,7 +17,7 @@ class ArtObjectViewSet(viewsets.ReadOnlyModelViewSet):
         filters.SearchFilter
     )
     filterset_class = ArtObjFilter
-    search_fields = ("^name", "^author")
+    search_fields = ("^name", "^author__name",)
     ordering = ("id",)
 
     def get_serializer_class(self):

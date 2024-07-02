@@ -52,7 +52,7 @@ class AuthorShowAdmin(admin.ModelAdmin):
 class ArtObjectAdmin(admin.ModelAdmin):
     list_display = ("id", "name", "size", "is_published", "end_cost")
     list_filter = ("category", "style", "genre", "size_category", "author")
-    search_fields = ("name",)
+    search_fields = ("name", "author")
     list_display_links = ("name",)
 
 

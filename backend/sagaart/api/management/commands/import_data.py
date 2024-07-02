@@ -33,7 +33,7 @@ class Command(BaseCommand):
             model_name = Path(file).stem
             model_class = apps.get_model(ARTOBJECTS_APP_LABEL, model_name)
             try:
-                with open(f"static/data/{file}", newline="") as f:
+                with open(f"static/data/{file}", newline="", encoding='utf-8') as f:
                     dataframe = csv.DictReader(f)
                     for row in dataframe:
                         try:
